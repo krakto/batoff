@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center">
-                <img src="https://images.pexels.com/photos/1105019/pexels-photo-1105019.jpeg" alt="Batteiger Logo" className="w-10 h-10 rounded-lg object-cover" />
+                <img src="/batteiger-logo.png" alt="Batteiger Logo" className="w-10 h-10 rounded-lg object-cover" />
               </div>
               <div>
                 <h3 className="text-xl font-bold">Batteiger</h3>

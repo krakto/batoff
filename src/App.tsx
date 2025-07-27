@@ -9,7 +9,6 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import BlogPost1 from './pages/BlogPost1';
 import BlogPost2 from './pages/BlogPost2';
-import BlogPost3 from './pages/BlogPost3';
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/spring-lawn-care-tips" element={<BlogPost1 />} />
             <Route path="/blog/winter-snow-removal-guide" element={<BlogPost2 />} />
-            <Route path="/blog/fall-lawn-preparation" element={<BlogPost3 />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
