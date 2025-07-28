@@ -119,18 +119,35 @@ const Services = () => {
                 <div className={`flex items-center justify-between mt-auto ${
                   index === 1 ? 'pt-4' : ''
                 }`}>
-                  <span className={`font-semibold text-red-600 whitespace-nowrap ${
-                    index === 1 ? 'text-lg lg:text-xl' : 'text-base lg:text-lg'
-                  }`}>{service.price}</span>
-                  <Link
-                    to="/contact"
-                    className={`text-red-600 font-semibold hover:text-red-700 inline-flex items-center group whitespace-nowrap ${
-                      index === 1 ? 'text-base lg:text-lg' : ''
-                    }`}
-                  >
-                    Get Quote
-                    <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-                  </Link>
+                  {index === 1 ? (
+                    // Special layout for Fertilization Program (middle card)
+                    <>
+                      <span className="text-sm font-semibold text-red-600 whitespace-nowrap">
+                        {service.price}
+                      </span>
+                      <Link
+                        to="/contact"
+                        className="text-sm text-red-600 font-semibold hover:text-red-700 inline-flex items-center group whitespace-nowrap"
+                      >
+                        Get Quote
+                        <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-1 transition-transform duration-200" />
+                      </Link>
+                    </>
+                  ) : (
+                    // Default layout for other cards
+                    <>
+                      <span className="text-base lg:text-lg font-semibold text-red-600 whitespace-nowrap">
+                        {service.price}
+                      </span>
+                      <Link
+                        to="/contact"
+                        className="text-red-600 font-semibold hover:text-red-700 inline-flex items-center group whitespace-nowrap"
+                      >
+                        Get Quote
+                        <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                      </Link>
+                    </>
+                  )}
                 </div>
               </div>
             ))}
